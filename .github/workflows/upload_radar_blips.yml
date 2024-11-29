@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  tech_radar_upload:
+    runs-on: ubuntu-latest
+    name: "test the action"
+    steps:
+      - uses: showoffninja/tech_radar_upload@main
+        with:
+          source-repo: $GITHUB_REPOSITORY
+          tech-radar-repo: "Showoffninja/tech_radar_collector"
+          commit-email: "some@email.com"
